@@ -1,0 +1,271 @@
+/* general formatting for whole page */
+
+nav .navbar-brand {
+    /* size for brand */
+    font-size: larger;
+}
+
+main {
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+}
+
+body {
+    overflow-wrap: normal;
+    overflow-x: visible;
+    background-color: "#F5F5F0";
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+/* heading of each page, e.g. about me! or what i study */
+.greeting {
+    margin-bottom: 5%;
+}
+
+/* general ways to format elements */
+.rightalign {
+    text-align: right;
+}
+ 
+ .leftalign {
+    text-align: left;
+}
+ 
+.bold {
+     font-weight: bold;
+}
+ 
+ .center {
+    /* center contents */
+    text-align: center;
+ }
+
+
+.large {
+    font-size: xx-large;
+}
+
+.thin {
+    margin-bottom: 2vh;
+    margin-top: 0px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.indent {
+    margin-left: 15px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+ /* body of the page */
+ .body {
+    padding:0 10px 10px 0;
+ }
+
+/* the logo at top left in the header */
+.logo {
+    width: 6.25%; 
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+/* body section part 1 of research.html */
+.predictive {
+    margin-bottom: 4vh;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+/* text section of .predictive div in research.html */
+.predictive-text {
+    min-width: 250px;
+    max-width: 600px;
+    margin-left: 40px;
+    margin-right: 40px;
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
+}
+
+/* text section of the second half of research.html */
+.lolr,
+.scientific {
+    min-width: 250px;
+    max-width: 400px;
+    margin-left: 30px;
+    margin-right: 30px;
+    /* margin-top: 30px; */
+    /* margin-bottom: 30px; */
+}
+
+/* the second half of research.html */
+.previous-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+/* the little card popouts with big-picture questions from research.html */
+.blurb {
+    font-size: larger;
+    font-weight: bold;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+
+    padding: 5px 5px 5px 5px;
+    padding-top: 15px;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+
+    /* glassmorphism */
+    /* https://hype4.academy/tools/glassmorphism-generator */
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+/* i cannot figure out where this is used */
+.previous-card-text {
+    max-width: 10vw;
+    flex-wrap: wrap;
+}
+
+/* about.html cards within cards section */
+.card {
+    border-radius: 10%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+}
+
+/* about.html body section */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/* the three cards */
+#trois,
+#monet,
+#taipei101 {
+    width: 16vw;
+    margin-bottom: 5vw;
+}
+
+/* the three tooltips */
+#tooltipmonet,
+#tooltiptrois,
+#tooltip101 {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+
+    max-width: 225px;
+    overflow-wrap: normal;
+    text-align: center;
+    z-index: 1;
+}
+
+/* the arrow attached to the tooltip that points to the card */
+#arrowmonet,
+#arrowtrois,
+#arrow101,
+#arrowmonet::before,
+#arrowtrois::before,
+#arrow101::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+/* hide the arrows */
+#arrowmonet,
+#arrowtrois,
+#arrow101 {
+  visibility: hidden;
+}
+
+#arrowmonet::before,
+#arrowtrois::before,
+#arrow101::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+/* positioning of tooltip/arrow */
+#tooltipmonet[data-popper-placement^='top'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='top'] > #arrowtrois,
+#tooltip101[data-popper-placement^='top'] > #arrow101 {
+    bottom: -4px;
+}
+
+#tooltipmonet[data-popper-placement^='bottom'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='bottom'] > #arrowtrois,
+#tooltip101[data-popper-placement^='bottom'] > #arrow101 {
+    top: -4px;
+}
+
+#tooltipmonet[data-popper-placement^='left'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='left'] > #arrowtrois,
+#tooltip101[data-popper-placement^='left'] > #arrow101 {
+    right: -4px;
+}
+
+#tooltipmonet[data-popper-placement^='right'] > #arrowmonet,
+#tooltiptrois[data-popper-placement^='right'] > #arrowtrois,
+#tooltip101[data-popper-placement^='right'] > #arrow101 {
+    left: -4px;
+}
+
+/* hide the tooltips */
+#tooltipmonet,
+#tooltiptrois,
+#tooltip101 {
+    /* ... */
+    display: none;
+}
+
+#tooltipmonet[data-show],
+#tooltiptrois[data-show],
+#tooltip101[data-show] {
+    display: block;
+}
+
+/* footer of the page: copyright + email */
+.footer {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
